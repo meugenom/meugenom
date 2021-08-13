@@ -5,6 +5,7 @@ const MUSTACHE_MAIN_DIR = './main.mustache';
 let DATA = {
   name: 'Eugen',
   city: 'FFM',
+  telegram: 'http://t.me/eugenemdev',
   date: new Date().toLocaleDateString('en-GB', {
     weekday: 'long',
     month: 'long',

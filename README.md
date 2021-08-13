@@ -6,4 +6,4 @@ This is the place where I opensource stuff and break things :rofl:
 - 🔭  I’m currently working on something cool :wink;
 - 🌱 I’m currently learning Java, Javascript;
 - 💬 Ask me about anything related to Javascript/Java or Angular/React/Express;
-- 📫 How to reach me: [@eugenemdev](https://twitter.com/eugenemdev) 
+- 📫 How to reach me: [@eugenemdev](http://t.me/eugenemdev)
