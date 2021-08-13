@@ -6,6 +6,7 @@ let DATA = {
   name: 'Eugen',
   city: 'Neu-Isenburg, DE',
   telegram: 'eugenemdev',
+  url: 'eugenem.dev',
   date: new Date().toLocaleDateString('en-GB', {
     weekday: 'long',
     month: 'long',
