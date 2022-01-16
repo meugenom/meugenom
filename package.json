@@ -1,5 +1,5 @@
 {
-  "name": "eugenemdev",
+  "name": "meugenom",
   "version": "1.0.0",
   "description": "Github readme about me ",
   "main": "index.js",
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eugenemdev/eugenemdev.git"
+    "url": "git+https://github.com/meugenom/meugenom.git"
   },
   "keywords": [
-    "eugenemdev",
+    "meugenom",
     "profile",
     "readme"
   ],
-  "author": "eugenemdev",
+  "author": "meugenom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eugenemdev/eugenemdev/issues"
+    "url": "https://github.com/meugenom/meugenom/issues"
   },
-  "homepage": "https://github.com/eugenemdev/eugenemdev#readme",
+  "homepage": "https://github.com/meugenom/meugenom#readme",
   "dependencies": {
     "mustache": "^4.2.0"
   }

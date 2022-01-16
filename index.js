@@ -5,8 +5,8 @@ const MUSTACHE_MAIN_DIR = './main.mustache';
 let DATA = {
   name: 'Eugen',
   city: 'Neu-Isenburg, DE',
-  telegram: 'eugenemdev',
-  url: 'eugenem.dev',
+  telegram: 'meugenom',
+  url: 'meugenom.com',
   date: new Date().toLocaleDateString('en-GB', {
     weekday: 'long',
     month: 'long',
