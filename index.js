@@ -4,9 +4,9 @@ const fs = require('fs');
 const MUSTACHE_MAIN_DIR = './main.mustache';
 let DATA = {
   name: 'Eugen',
-  city: 'Neu-Isenburg, DE',
-  telegram: 'meugenom',
+  city: 'Neu-Isenburg',
   url: 'meugenom.com',
+  mail: 'hallo@meugenom.com',
   date: new Date().toLocaleDateString('en-GB', {
     weekday: 'long',
     month: 'long',
