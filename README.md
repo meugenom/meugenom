@@ -1,8 +1,7 @@
 ### Hi there <a href="https://meugenom.com">🖐</a>
 
-This is the place where I opensource stuff and break things :rofl:
-
 - ⚡  Today is Wednesday, 29 June, 11:41 CEST,
+
 - 👨‍💼 I’m Eugen and 🏡 live in Neu-Isenburg,
 - 🔭 I’m currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java or Angular/React/Express and Testing;
