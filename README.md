@@ -2,7 +2,7 @@
 
 This is the place where I opensource stuff and break things :rofl:
 
-- ⚡  Today is Friday, 1 July, 08:07 CEST,
+- ⚡  Today is Friday, 1 July, 15:48 CEST,
 - 👨‍💼 I’m Eugen and 🏡 live in Neu-Isenburg,
 - 🔭 I’m currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java , React/Typescript , Testing;
@@ -13,6 +13,6 @@ This is the place where I opensource stuff and break things :rofl:
 ![Meugenom's GitHub stats](https://github-readme-stats.vercel.app/api?username=meugenom&show_icons=true) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=meugenom&layout=compact&hide=CSS,HTML)](https://github.com/meugenom) 
 
 #### CodeWars Statistics: 
-[![Profile badge](https://www.codewars.com/users/meugenom/badges/large)](https://www.codewars.com/users/meugenom)
+[![Profile badge](https://www.codewars.com/users/meugenom/badges/large?theme=light)](https://www.codewars.com/users/meugenom)
 
 [![README build](https://github.com/meugenom/meugenom/actions/workflows/main.yaml/badge.svg)](https://github.com/meugenom/meugenom/actions/workflows/main.yaml)
