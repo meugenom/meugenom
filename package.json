@@ -23,5 +23,8 @@
   "homepage": "https://github.com/meugenom/meugenom#readme",
   "dependencies": {
     "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2"
   }
 }

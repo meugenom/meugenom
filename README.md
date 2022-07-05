@@ -2,7 +2,7 @@
 
 This is the place where I opensource stuff and break things :rofl:
 
-- ⚡  Today is Friday, 1 July, 16:11 CEST,
+- ⚡  Today is Tuesday, 5 July, 14:27 CEST,
 - 👨‍💼 I’m Eugen and 🏡 live in Neu-Isenburg,
 - 🔭 I’m currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java , React/Typescript , Testing;
@@ -14,6 +14,10 @@ This is the place where I opensource stuff and break things :rofl:
 
 [![CodeWars](https://www.codewars.com/users/meugenom/badges/small?theme=light)](https://www.codewars.com/users/meugenom)
 
-[![LeetCode user meugenom](https://img.shields.io/badge/dynamic/json?style=for-the-badge&labelColor=black&color=%23ffa116&label=LeetCode%3A%20%20Solved%20Problems&query=solved&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2Fmeugenom&logo=leetcode&logoColor=yellow)](https://leetcode.com/meugenom/)
+[![LeetCode Stats All](https://img.shields.io/badge/LEETCODE%20SOLVED%20PROBLEMS%20%3A-34-orange)](https://leetcode.com/meugenom/)
+[![LeetCode Stats Easy](https://img.shields.io/badge/EASY%20%3A-20-brightgreen)](https://leetcode.com/meugenom/)
+[![LeetCode Stats Medium](https://img.shields.io/badge/MEDIUM%20%3A-12-yellow)](https://leetcode.com/meugenom/)
+[![LeetCode Stats Hard](https://img.shields.io/badge/HARD%20%3A-2-red)](https://leetcode.com/meugenom/)
+
 
 [![README build](https://github.com/meugenom/meugenom/actions/workflows/main.yaml/badge.svg)](https://github.com/meugenom/meugenom/actions/workflows/main.yaml)
