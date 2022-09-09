@@ -2,7 +2,7 @@
 
 This is the place where I opensource stuff and break things :rofl:
 
-- ⚡  Today is Friday, 9 September at 02:33 CEST,
+- ⚡  Today is Friday, 9 September at 08:22 CEST,
 - 👨‍💼 I’m Eugen and 🏡 live in Neu-Isenburg,
 - 🔭 I’m currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java , React/Typescript , Testing;
