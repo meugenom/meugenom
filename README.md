@@ -2,7 +2,7 @@
 
 This is the place where I opensource stuff and break things :rofl:
 
-- ⚡  Today is Tuesday, 13 September at 08:43 CEST,
+- ⚡  Today is Tuesday, 13 September at 14:11 CEST,
 - 👨‍💼 I’m Eugen and 🏡 live in Neu-Isenburg,
 - 🔭 I’m currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java , React/Typescript , Testing;
@@ -14,8 +14,8 @@ This is the place where I opensource stuff and break things :rofl:
 
 [![CodeWars](https://www.codewars.com/users/meugenom/badges/small?theme=light)](https://www.codewars.com/users/meugenom)
 
-[![LeetCode Stats All](https://img.shields.io/badge/LEETCODE%20SOLVED%20PROBLEMS%20%3A-117-orange)](https://leetcode.com/meugenom/)
-[![LeetCode Stats Easy](https://img.shields.io/badge/EASY%20%3A-61-brightgreen)](https://leetcode.com/meugenom/)
+[![LeetCode Stats All](https://img.shields.io/badge/LEETCODE%20SOLVED%20PROBLEMS%20%3A-118-orange)](https://leetcode.com/meugenom/)
+[![LeetCode Stats Easy](https://img.shields.io/badge/EASY%20%3A-62-brightgreen)](https://leetcode.com/meugenom/)
 [![LeetCode Stats Medium](https://img.shields.io/badge/MEDIUM%20%3A-54-yellow)](https://leetcode.com/meugenom/)
 [![LeetCode Stats Hard](https://img.shields.io/badge/HARD%20%3A-2-red)](https://leetcode.com/meugenom/)
 
