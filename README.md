@@ -4,7 +4,7 @@ This is the place where I opensource stuff and break things :rofl:
 
 ![laptop-panda](/assets/LaptopPanda.png)
 
-- ⚡  Today is Friday, 20 January at 19:00 CET,
+- ⚡  Today is Saturday, 21 January at 01:27 CET,
 - 👨‍💼 I’m Eugen and 🏡 live in Neu-Isenburg,
 - 🔭 I’m currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java , React/Angular/Typescript, Testing;
