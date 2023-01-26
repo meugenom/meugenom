@@ -2,7 +2,7 @@
 
 This is the place where I opensource stuff and break things :rofl:
 
-- ⚡  This readme.md was generated automatic Thursday, 26 January at 21:39 CET,
+- ⚡  This readme.md was generated automatic Thursday, 26 January at 21:51 CET,
 - 👨‍💼 I’m Eugen and currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java , React/Angular/Typescript or Testing;
 - 📀 How to find my website: [https://meugenom.com](https://meugenom.com)
@@ -15,12 +15,6 @@ This is the place where I opensource stuff and break things :rofl:
 ![chart-bar](/assets/leetcode-total-info-circle.svg)
 
 [![CodeWars](https://www.codewars.com/users/meugenom/badges/small?theme=light)](https://www.codewars.com/users/meugenom)
-
----------------
-<div>
-	<p><b>Visitors Count</b></p>  
-	<p><img align="center" src="https://profile-counter.glitch.me/{meugenom}/count.svg" /></p> 
-</div>
 
 ---------------
 
