@@ -2,7 +2,7 @@
 
 This is the place where I opensource stuff and break things :rofl:
 
-- ⚡  This readme.md was generated automatic Tuesday, 4 April at 20:01 CEST,
+- ⚡  This readme.md was generated automatic Wednesday, 5 April at 02:22 CEST,
 - 👨‍💼 I’m Eugen and currently working on something cool;
 - 💬 Ask me about anything related to Javascript/Java , React/Angular/Typescript or Testing;
 - 📀 How to find my website: [https://meugenom.com](https://meugenom.com)
