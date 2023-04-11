@@ -2,3 +2,6 @@
 .env
 node_modules/
 node_modules/.package-lock.json
+assets/leetcode-total-info-circle.svg
+assets/github-total-bicycle.svg
+assets/github-languages-sledge.svg
