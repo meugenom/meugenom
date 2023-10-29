@@ -4,6 +4,7 @@
 
 const axios = require("axios").default;
 
+
 let info = {
 	leetcode: {
 		allQuestionsStats: 
@@ -78,19 +79,26 @@ const setData = async (res) => {
 				}
 			}
 			`,
-		variables: {},
+		variables: {
+			username: username
+		},
 	  };
 	  let options = {
 		headers: {
-		  "Content-Type": "application/json",
+		  'Content-Type': 'application/json',
+          'Referer': 'https://leetcode.com'
 		},
 	  };
-	  await axios
-	  .post("https://leetcode.com/graphql", body, options)
-	  .then(async (response) => {
-		//console.log(JSON.stringify(response.data));
-		setData(JSON.stringify(response.data)); 
-	  });
+	  try {
+	  	await axios
+	  	.post("https://leetcode.com/graphql", body, options)		  
+	  	.then(async (response) => {
+			//console.log(JSON.stringify(response.data));
+			setData(JSON.stringify(response.data)); 
+	  	});
+	  } catch (error) {
+		console.log(error);
+	  }
   };
 
   exports.get = get;
