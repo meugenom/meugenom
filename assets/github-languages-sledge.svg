@@ -50,7 +50,7 @@
 <g fill="none" stroke-width="20" class="line"><line x2="550" y2="275" x1="20" y1="275" stroke="#404040" />
 		<line x2="526" y2="255" x1="20" y1="255" stroke="#93648D" />
 		<line x2="306" y2="235" x1="20" y1="235" stroke="#4CC3D9" />
-		<line x2="73" y2="215" x1="20" y1="215" stroke="#7BC8A4" />
+		<line x2="72" y2="215" x1="20" y1="215" stroke="#7BC8A4" />
 		<line x2="68" y2="195" x1="20" y1="195" stroke="#FFC65D" />
 		<line x2="58" y2="175" x1="20" y1="175" stroke="#F16745" />
 		</g>
@@ -67,7 +67,7 @@
 	<g class="name"> <text x="560" y="280" fill="#404040" >TypeScript (32.8%)</text>
 		 <text x="536" y="260" fill="#93648D" >Java (31.4%)</text>
 		 <text x="316" y="240" fill="#4CC3D9" >JavaScript (18.3%)</text>
-		 <text x="83" y="220" fill="#7BC8A4" >HTML (4.4%)</text>
+		 <text x="82" y="220" fill="#7BC8A4" >HTML (4.3%)</text>
 		 <text x="78" y="200" fill="#FFC65D" >CSS (4.1%)</text>
 		 <text x="68" y="180" fill="#F16745" >Sass (3.5%)</text>
 		</g>
