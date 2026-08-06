@@ -6,7 +6,11 @@ on:
       - main
   schedule:
     - cron: '0 0 * * *' # Run every day at midnight UTC
-  workflow_dispatch:
+  workflow_dispatch: # Let's start 
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
