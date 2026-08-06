@@ -1,106 +1,75 @@
-/**
- * leetcode fetcher
- */
-
 const axios = require("axios").default;
 
+const parseData = (resData) => {
+  if (resData.errors) {
+    throw new Error(`LeetCode GraphQL error: ${JSON.stringify(resData.errors)}`);
+  }
 
-let info = {
-	leetcode: {
-		allQuestionsStats: 
-		[
-			{difficulty: "All", count: 0},
-			{difficulty: "Easy", count: 0},
-			{difficulty: "Medium", count: 0},
-			{difficulty: "Hard", count: 0}
-		],
-		problemSolvedStats: 
-		[
-			{difficulty: "Easy", percentage: 0},
-			{difficulty: "Medium", percentage: 0},
-			{difficulty: "Hard", percentage: 0}
-		],
-		acSubmissionNum: 
-		[
-			{difficulty: "All", count: 0},
-			{difficulty: "Easy", count: 0},
-			{difficulty: "Medium", count: 0},
-			{difficulty: "Hard", count: 0}
-		]
-	}
+  const data = resData.data;
+  if (!data || !data.matchedUser) {
+    throw new Error("LeetCode GraphQL returned empty data");
+  }
+
+  const acSubmissionNum = data.matchedUser.submitStats.acSubmissionNum;
+  const problemSolvedStats = data.matchedUser.problemSolvedStats;
+  const allQuestionsStats = data.allQuestionsStats;
+
+  return {
+    allQuestionsStats: [
+      { difficulty: "All", count: allQuestionsStats[0].count },
+      { difficulty: "Easy", count: allQuestionsStats[1].count },
+      { difficulty: "Medium", count: allQuestionsStats[2].count },
+      { difficulty: "Hard", count: allQuestionsStats[3].count },
+    ],
+    problemSolvedStats: [
+      { difficulty: "Easy", percentage: problemSolvedStats[0].percentage },
+      { difficulty: "Medium", percentage: problemSolvedStats[1].percentage },
+      { difficulty: "Hard", percentage: problemSolvedStats[2].percentage },
+    ],
+    acSubmissionNum: [
+      { difficulty: "All", count: acSubmissionNum[0].count },
+      { difficulty: "Easy", count: acSubmissionNum[1].count },
+      { difficulty: "Medium", count: acSubmissionNum[2].count },
+      { difficulty: "Hard", count: acSubmissionNum[3].count },
+    ],
+  };
 };
 
-const setData = async (res) => {
-	
-	let object = JSON.parse(res)["data"];
-
-	//console.log(object);
-  
-	info.leetcode.allQuestionsStats[0].count = object.allQuestionsStats[0].count;
-	info.leetcode.allQuestionsStats[1].count = object.allQuestionsStats[1].count;
-	info.leetcode.allQuestionsStats[2].count = object.allQuestionsStats[2].count;
-	info.leetcode.allQuestionsStats[3].count = object.allQuestionsStats[3].count;
-
-	let acSubmissionNum = object["matchedUser"]["submitStats"]["acSubmissionNum"];
-	info.leetcode.acSubmissionNum[0].count = acSubmissionNum[0].count;
-	info.leetcode.acSubmissionNum[1].count = acSubmissionNum[1].count;
-	info.leetcode.acSubmissionNum[2].count = acSubmissionNum[2].count;
-	info.leetcode.acSubmissionNum[3].count = acSubmissionNum[3].count;
- 	
-	let problemSolvedStats = object["matchedUser"]["problemSolvedStats"];
-	info.leetcode.problemSolvedStats[0].percentage = problemSolvedStats[0].percentage;
-	info.leetcode.problemSolvedStats[1].percentage = problemSolvedStats[1].percentage;
-	info.leetcode.problemSolvedStats[2].percentage = problemSolvedStats[2].percentage;
-
-	//console.log(JSON.stringify(info))
-
-	}
-
-  const get = async (username) => {
-    let body = {
-		query: `
-			{	
-				matchedUser(username: "${username}") {
-					username
-					submitStats: submitStatsGlobal {
-					  acSubmissionNum {
-						difficulty
-						count
-					  }
-					}
-					problemSolvedStats: problemsSolvedBeatsStats {
-						difficulty
-						percentage
-					}
-				  }				  
-				  allQuestionsStats: allQuestionsCount {
-					difficulty
-					count
-				}
-			}
-			`,
-		variables: {
-			username: username
-		},
-	  };
-	  let options = {
-		headers: {
-		  'Content-Type': 'application/json',
-          'Referer': 'https://leetcode.com'
-		},
-	  };
-	  try {
-	  	await axios
-	  	.post("https://leetcode.com/graphql", body, options)		  
-	  	.then(async (response) => {
-			//console.log(JSON.stringify(response.data));
-			setData(JSON.stringify(response.data)); 
-	  	});
-	  } catch (error) {
-		console.log(error);
-	  }
+const get = async (username) => {
+  const body = {
+    query: `
+      {	
+        matchedUser(username: "${username}") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+            }
+          }
+          problemSolvedStats: problemsSolvedBeatsStats {
+            difficulty
+            percentage
+          }
+        }				  
+        allQuestionsStats: allQuestionsCount {
+          difficulty
+          count
+        }
+      }
+    `,
+    variables: { username },
   };
 
-  exports.get = get;
-  exports.setData = setData;
-  exports.info = info;
+  const options = {
+    headers: {
+      "Content-Type": "application/json",
+      Referer: "https://leetcode.com",
+    },
+  };
+
+  const response = await axios.post("https://leetcode.com/graphql", body, options);
+  return parseData(response.data);
+};
+
+module.exports = { get };
