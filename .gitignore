@@ -7,4 +7,6 @@ assets/github-total-bicycle.svg
 assets/github-languages-sledge.svg
 .idea
 .vscode
-
+node_modules/
+.package-lock.json
+node_modules/.package-lock.json
