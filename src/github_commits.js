@@ -1,109 +1,87 @@
-/**
- * github fetcher
- */
-
 const axios = require("axios").default;
 
-let info = {
-	github: {
-		totalRepositories: 0,
-		totalCommits: 0,
-		contributions: 0,
-		pullRequests: 0,
-		closedIssues: 0,
-		followers: 0,
-		totalStargazers: 0,
-	  },
-	};
+const parseData = (resData) => {
+  if (resData.errors) {
+    throw new Error(`GitHub GraphQL error: ${JSON.stringify(resData.errors)}`);
+  }
 
-const setData = async (res) => {
-	let object = JSON.parse(res)["data"];
-    
-    info.github.totalRepositories = object["user"]["repositories"]["totalCount"],
-    info.github.totalCommits = object["user"]["contributionsCollection"]["totalCommitContributions"],
-    info.github.contributions =  object["user"]["repositoriesContributedTo"]["totalCount"],
-    info.github.pullRequests =  object["user"]["pullRequests"]["totalCount"],
-    info.github.closedIssues =  object["user"]["closedIssues"]["totalCount"],
-    info.github.followers =  object["user"]["followers"]["totalCount"]
+  const user = resData.data?.user;
+  if (!user) {
+    throw new Error("GitHub GraphQL returned empty user data");
+  }
 
-	//calculate sum of stargazers
-	//console.log(object["user"]["repositories"]["edges"])
-	let sumStargazers = 0;
-	const nodes = object["user"]["repositories"]["edges"]
-	nodes.forEach((node)=>{
-		//console.log(node["node"]["stargazers"]["totalCount"]);
-		sumStargazers = sumStargazers + node["node"]["stargazers"]["totalCount"];
-	})
+  const sumStargazers = user.repositories.edges.reduce(
+    (sum, node) => sum + (node.node.stargazers.totalCount || 0),
+    0
+  );
 
-	info.github.totalStargazers =  sumStargazers;
+  return {
+    totalRepositories: user.repositories.totalCount,
+    totalCommits: user.contributionsCollection.totalCommitContributions,
+    contributions: user.repositoriesContributedTo.totalCount,
+    pullRequests: user.pullRequests.totalCount,
+    closedIssues: user.closedIssues.totalCount,
+    followers: user.followers.totalCount,
+    totalStargazers: sumStargazers,
+  };
+};
 
-	}
-
-  const get = async (username, token) => {
-
-    let body = {
-      query: `
-			query {
-			user(login: "${username}") {
-			  name
-			  login
-			  contributionsCollection {
-				totalCommitContributions
-				restrictedContributionsCount
-			  }
-			  repositoriesContributedTo(contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
-				totalCount
-			  }
-			  pullRequests {
-				totalCount
-			  }
-			  openIssues: issues(states: OPEN) {
-				totalCount
-			  }
-			  closedIssues: issues(states: CLOSED) {
-				totalCount
-			  }
-			  followers {
-				totalCount
-			  }
-			  repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
-				totalCount
-				edges {
-				  cursor
-				  node {
-					name
-					stargazers {
-					  totalCount
-					}
-					watchers {
-					  totalCount	
-					}
-				  }
-				}
-			  }
-			}
-		  }
-		`,
-      variables: {},
-    };
-    let options = {
-      headers: {
-        "Content-Type": "application/json",
-		Authorization: `bearer ${token}`,
-      },
-    };
-	try {
-    await axios
-      .post("https://api.github.com/graphql", body, options)
-      .then(async (response) => {
-        //console.log(JSON.stringify(response.data));
-		setData(JSON.stringify(response.data));
-      });
-	} catch (error) {
-		console.log(error);
-	}
+const get = async (username, token) => {
+  const body = {
+    query: `
+      query {
+        user(login: "${username}") {
+          name
+          login
+          contributionsCollection {
+            totalCommitContributions
+            restrictedContributionsCount
+          }
+          repositoriesContributedTo(contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
+            totalCount
+          }
+          pullRequests {
+            totalCount
+          }
+          openIssues: issues(states: OPEN) {
+            totalCount
+          }
+          closedIssues: issues(states: CLOSED) {
+            totalCount
+          }
+          followers {
+            totalCount
+          }
+          repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+            totalCount
+            edges {
+              cursor
+              node {
+                name
+                stargazers {
+                  totalCount
+                }
+                watchers {
+                  totalCount	
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+    variables: {},
   };
 
-  exports.get = get;
-  exports.setData = setData;
-  exports.info = info;
+  const options = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${token}`,
+    },
+  };
+
+  const response = await axios.post("https://api.github.com/graphql", body, options);
+  return parseData(response.data);
+};
+
+module.exports = { get };
