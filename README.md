@@ -3,7 +3,7 @@
 I'm Eugen, a software engineer making a deliberate transition into embedded systems and signal processing.
 
 
-⚡  This readme.md was generated automatically on Monday 10 August at 04:24 CEST,
+⚡  This readme.md was generated automatically on Monday 10 August at 22:06 CEST,
 
 about me:
 - 🎓 **Current:** Electrical Engineering student at TH Aschaffenburg
@@ -18,16 +18,17 @@ about me:
 
 1. [**Model-Based Systems Pipeline Template**](https://github.com/meugenom/light-mbse-pipeline-skeleton) - a strict roadmap for modeling and validating hardware components using a text-based, reproducible pipeline, `Embedded`, `STM32`, `V&V`, `Light-MBSE-Pipeline-Skeleton`, `GNU Octave`, `Renode`;
 2. [**Data-driven C++ motor model for drone flight simulation SIL**](https://github.com/meugenom/motor_1404-prop-T4030-2s-simu-empirical-model) - BrotherHobby 1404 KV4600 — Semi-Empirical Motor Model for SiL Simulation. `BLDC-Motor`, `Light-MBSE-Pipeline-Skeleton`,`C/C++`, `GNU Octave`, `Renode`;
-3. [**SPA MVC ROUTER**](https://github.com/meugenom/spa-mvc-router) - Simle SPA MVC Framework, `JS-ES6`, `MVC-pattern`;
-4. [**Markdown TS Compiler**](https://github.com/meugenom/markdown-ts-compiler) - an isomorphic and high-performance compiler to parse markdown text to html, `TS`, `AST-Tree`, `REGEXP`;
-5. [**Personal Content System - SPA-Zero-Framework**](https://github.com/meugenom/meugenom.com) - Personal Content System, `TS`, `GraphQl`, `Spring-Boot`,`TailwindCSS`, `Github-API`, `Redis`;
-6. [**Web-based Cloud Desktop for users**](https://github.com/meugenom/cloudydesk)- Archived , Before-AI era. `Angular`,`Spring-Boot`, `Fullstack`;
+3. [**STM32 NUCLEO-F446RE Bare-Metal Basics**](https://github.com/meugenom/stm32-nucleo-f446re-baremetal-basics) - Educational repository for bare-metal C programming on ARM Cortex-M4 without HAL/CMSIS, featuring automated OpenOCD/GDB debugging and Makefile build pipeline. `STM32`, `Bare-Metal`, `C/C++`, `ARM-Cortex-M4`, `OpenOCD`, `GDB`, `Makefile`;
+4. [**SPA MVC ROUTER**](https://github.com/meugenom/spa-mvc-router) - Simle SPA MVC Framework, `JS-ES6`, `MVC-pattern`;
+5. [**Markdown TS Compiler**](https://github.com/meugenom/markdown-ts-compiler) - an isomorphic and high-performance compiler to parse markdown text to html, `TS`, `AST-Tree`, `REGEXP`;
+6. [**Personal Content System - SPA-Zero-Framework**](https://github.com/meugenom/meugenom.com) - Personal Content System, `TS`, `GraphQl`, `Spring-Boot`,`TailwindCSS`, `Github-API`, `Redis`;
+7. [**Web-based Cloud Desktop for users**](https://github.com/meugenom/cloudydesk)- Archived , Before-AI era. `Angular`,`Spring-Boot`, `Fullstack`;
 
 #### Early Development
 
-7. [**Portable lock-free ring buffer in pure C for embedded and realtime systems**](https://github.com/meugenom/portable-ring-buffer), `C`, `GNU Octave`, `STM32`, `Renode`;
-8. **OMOVA** - concept of German-speaking assistant, `C++`, `LLM`, `ASR`, `TTS`, `German-Voices`, `RabbitMQ`;
-9. [**Desktop concept, no backend, IndexedDB only**](https://github.com/meugenom/ng-desktop), `Angular`, `IndexedDB`, `Frontend`, `TS`.
+8. [**Portable lock-free ring buffer in pure C for embedded and realtime systems**](https://github.com/meugenom/portable-ring-buffer), `C`, `GNU Octave`, `STM32`, `Renode`;
+9. **OMOVA** - concept of German-speaking assistant, `C++`, `LLM`, `ASR`, `TTS`, `German-Voices`, `RabbitMQ`;
+10. [**Desktop concept, no backend, IndexedDB only**](https://github.com/meugenom/ng-desktop), `Angular`, `IndexedDB`, `Frontend`, `TS`.
 
 💾 Want to see some of my coding stats? Check out my [github-leetcode-stats repository](https://github.com/meugenom/github-leetcode-stats)
 
