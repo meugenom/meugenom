@@ -3,7 +3,7 @@
 I'm Eugen, a software engineer making a deliberate transition into embedded systems and signal processing.
 
 
-⚡  This readme.md was generated automatically on Saturday 21 November at 07:52 CET,
+⚡  This readme.md was generated automatically on Sunday 22 November at 07:25 CET,
 
 about me:
 - 🎓 **Current:** Electrical Engineering student at TH Aschaffenburg
